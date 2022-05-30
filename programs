@@ -1,10 +1,15 @@
 #!/bin/bash
-# Enable RPM fusion
-sudo dnf install \
-  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -yy
+
 #A script to install my favorite programs and uninstall programs that I do not want on Fedora
+
+# Enable RPM fusion free and nonfree
+
 sudo dnf install \
   https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm -yy
+
+sudo dnf install \
+  https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -yy
+  
 #Update
 sudo dnf update -yy
 

@@ -1,0 +1,120 @@
+#!/bin/bash
+# Enable RPM fusion
+sudo dnf install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+#A script to install my favorite programs and uninstall programs that I do not want on Fedora
+sudo dnf install \
+  https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+#Update
+sudo dnf update -yy
+
+#Remove Programs
+
+echo "*************PURGING PROGRAMS*************"
+
+sudo dnf remove libreoffice* -yy
+
+sudo dnf remove firefox -yy
+
+sudo dnf remove vlc -yy
+
+sudo dnf remove sticky -yy
+
+#Install Programs
+
+echo "*************INSTALLING PROGRAMS*************"
+
+# No need to install MS fonts. Comes with OnlyOffice.
+# sudo dnf install ttf-mscorefonts-installer -yy
+
+sudo dnf install htop -yy
+
+sudo dnf install simplescreenrecorder -yy
+
+sudo dnf install numlockx -yy
+
+sudo dnf install mc -yy
+
+sudo dnf install stacer -yy
+
+sudo dnf install mint-meta-codecs -yy
+
+sudo dnf install gparted -yy
+
+sudo dnf install brasero -yy
+
+sudo dnf install grub-customizer -yy
+
+sudo dnf install bulky -yy
+
+sudo dnf install parcellite -yy
+
+#Install Brave Browser
+
+sudo dnf install dnf-transport-https curl -yy
+
+curl -s https://brave-browser-dnf-release.s3.brave.com/brave-core.asc | sudo dnf-key --keyring /etc/dnf/trusted.gpg.d/brave-browser-release.gpg add -
+
+echo "deb [arch=amd64] https://brave-browser-dnf-release.s3.brave.com/ stable main" | sudo tee /etc/dnf/sources.list.d/brave-browser-release.list
+
+sudo dnf update
+
+sudo dnf install brave-browser -yy
+
+#Install Flatpak
+
+flatpak install org.onlyoffice.desktopeditors -yy
+
+flatpak install org.gnome.Cheese -yy
+
+flatpak install org.mozilla.firefox -yy
+
+flatpak install org.videolan.VLC -yy
+
+flatpak install fr.handbrake.ghb -yy
+
+flatpak install org.kde.kdenlive -yy
+
+flatpak install com.simplenote.Simplenote -yy
+
+flatpak install org.freefilesync.FreeFileSync -yy
+
+flatpak install org.jitsi.jitsi-meet -yy
+
+flatpak install org.signal.Signal -yy
+
+flatpak install org.audacityteam.Audacity -yy
+
+flatpak install org.videolan.VLC -yy
+
+flatpak install org.gnome.EasyTAG -yy
+
+flatpak install com.spotify.Client -yy
+
+flatpak install org.gtkhash.gtkhash -yy
+
+flatpak install org.mozilla.Thunderbird -yy
+
+flatpak install io.gitlab.librewolf-community -yy
+
+flatpak install org.js.nuclear.Nuclear -yy
+
+flatpak install org.gnome.Boxes -yy
+
+flatpak install org.flameshot.Flameshot -yy
+
+flatpak install com.obsproject.Studio -yy
+
+flatpak install org.gnome.Shotwell -yy
+
+flatpak install life.bolls.bolls -yy
+
+
+
+#Remove, and Clean
+
+echo "*************CLEANING*************"
+
+sudo dnf autoremove -yy
+
+sudo dnf autoclean -yy

@@ -19,13 +19,10 @@ echo "*************PURGING PROGRAMS*************"
 
 sudo dnf remove libreoffice* -yy
 
-flatpak install org.mozilla.firefox -yy
-
 sudo dnf remove firefox -yy
 
-sudo dnf remove vlc -yy
+flatpak install org.mozilla.firefox -yy
 
-sudo dnf remove sticky -yy
 
 #Install Programs
 
@@ -44,25 +41,19 @@ sudo dnf install mc -yy
 
 sudo dnf install stacer -yy
 
-sudo dnf install mint-meta-codecs -yy
-
 sudo dnf install gparted -yy
 
 sudo dnf install brasero -yy
 
 sudo dnf install grub-customizer -yy
 
-sudo dnf install bulky -yy
-
 #Install Brave Browser
 
-sudo dnf install dnf-transport-https curl -yy
+sudo dnf install dnf-plugins-core
 
-curl -s https://brave-browser-dnf-release.s3.brave.com/brave-core.asc | sudo dnf-key --keyring /etc/dnf/trusted.gpg.d/brave-browser-release.gpg add -
+sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
 
-echo "deb [arch=amd64] https://brave-browser-dnf-release.s3.brave.com/ stable main" | sudo tee /etc/dnf/sources.list.d/brave-browser-release.list
-
-sudo dnf update
+sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 sudo dnf install brave-browser -yy
 
@@ -118,6 +109,4 @@ flatpak install life.bolls.bolls -yy
 
 echo "*************CLEANING*************"
 
-sudo dnf autoremove -yy
-
-sudo dnf autoclean -yy
+sudo dnf clean all -yy

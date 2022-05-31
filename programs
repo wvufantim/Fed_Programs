@@ -23,7 +23,7 @@ sudo dnf remove libreoffice* -yy
 
 sudo dnf remove firefox -yy
 
-flatpak install org.mozilla.firefox -yy
+flatpak install flathub org.mozilla.firefox -yy
 
 
 #Install Programs
@@ -61,49 +61,49 @@ sudo dnf install brave-browser -yy
 
 #Install Flatpak
 
-flatpak install org.onlyoffice.desktopeditors -yy
+flatpak install flathub org.onlyoffice.desktopeditors -yy
 
-flatpak install org.gnome.Cheese -yy
+flatpak install flathub org.gnome.Cheese -yy
 
-flatpak install org.videolan.VLC -yy
+flatpak install flathub org.videolan.VLC -yy
 
-flatpak install fr.handbrake.ghb -yy
+flatpak install flathub fr.handbrake.ghb -yy
 
-flatpak install org.kde.kdenlive -yy
+flatpak install flathub org.kde.kdenlive -yy
 
-flatpak install com.simplenote.Simplenote -yy
+flatpak install flathub com.simplenote.Simplenote -yy
 
-flatpak install org.freefilesync.FreeFileSync -yy
+flatpak install flathub org.freefilesync.FreeFileSync -yy
 
-flatpak install org.jitsi.jitsi-meet -yy
+flatpak install flathub org.jitsi.jitsi-meet -yy
 
-flatpak install org.signal.Signal -yy
+flatpak install flathub org.signal.Signal -yy
 
-flatpak install org.audacityteam.Audacity -yy
+flatpak install flathub org.audacityteam.Audacity -yy
 
-flatpak install org.videolan.VLC -yy
+flatpak install flathub org.videolan.VLC -yy
 
-flatpak install org.gnome.EasyTAG -yy
+flatpak install flathub org.gnome.EasyTAG -yy
 
-flatpak install com.spotify.Client -yy
+flatpak install flathub com.spotify.Client -yy
 
-flatpak install org.gtkhash.gtkhash -yy
+flatpak install flathub org.gtkhash.gtkhash -yy
 
-flatpak install org.mozilla.Thunderbird -yy
+flatpak install flathub org.mozilla.Thunderbird -yy
 
-flatpak install io.gitlab.librewolf-community -yy
+flatpak install flathub io.gitlab.librewolf-community -yy
 
-flatpak install org.js.nuclear.Nuclear -yy
+flatpak install flathub org.js.nuclear.Nuclear -yy
 
-flatpak install org.gnome.Boxes -yy
+flatpak install flathub org.gnome.Boxes -yy
 
-flatpak install org.flameshot.Flameshot -yy
+flatpak install flathub org.flameshot.Flameshot -yy
 
-flatpak install com.obsproject.Studio -yy
+flatpak install flathub com.obsproject.Studio -yy
 
-flatpak install org.gnome.Shotwell -yy
+flatpak install flathub org.gnome.Shotwell -yy
 
-flatpak install life.bolls.bolls -yy
+flatpak install flathub life.bolls.bolls -yy
 
 
 

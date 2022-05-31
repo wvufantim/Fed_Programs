@@ -59,6 +59,12 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 sudo dnf install brave-browser -yy
 
+#Remove, and Clean
+
+echo "*************CLEANING*************"
+
+sudo dnf clean all -yy
+
 #Install Flatpak
 
 flatpak install flathub org.onlyoffice.desktopeditors -yy
@@ -104,11 +110,3 @@ flatpak install flathub com.obsproject.Studio -yy
 flatpak install flathub org.gnome.Shotwell -yy
 
 flatpak install flathub life.bolls.bolls -yy
-
-
-
-#Remove, and Clean
-
-echo "*************CLEANING*************"
-
-sudo dnf clean all -yy

@@ -2,6 +2,19 @@
 
 #A script to install my favorite programs and uninstall programs that I do not want on Fedora
 
+# Adjusting DNF
+
+sudo echo '# Added For Speed:' | sudo tee -a /etc/dnf/dnf.conf
+
+sudo echo 'fastestmirror=True' | sudo tee -a /etc/dnf/dnf.conf
+
+sudo echo 'max_parallel_downloads=10' | sudo tee -a /etc/dnf/dnf.conf
+
+sudo echo 'defaultyes=True' | sudo tee -a /etc/dnf/dnf.conf
+
+sudo echo 'keepcache=True' | sudo tee -a /etc/dnf/dnf.conf
+
+
 # Enable RPM fusion free, nonfree along with flatpak
 
 sudo dnf install \

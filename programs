@@ -4,9 +4,9 @@
 
 # Installing Multimedia Codecs
 
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -yy
 
-sudo dnf groupupdate sound-and-video
+sudo dnf groupupdate sound-and-video -yy
 
 # Adjusting DNF
 

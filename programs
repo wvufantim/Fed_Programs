@@ -2,6 +2,12 @@
 
 #A script to install my favorite programs and uninstall programs that I do not want on Fedora
 
+# Installing Multimedia Codecs
+
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+
+sudo dnf groupupdate sound-and-video
+
 # Adjusting DNF
 
 sudo echo '# Added For Speed:' | sudo tee -a /etc/dnf/dnf.conf

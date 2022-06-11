@@ -1,1 +1,11 @@
+#!/bin/bash
 
+sudo dnf upgrade --refresh -yy
+
+sudo reboot
+
+sudo dnf install dnf-plugin-system-upgrade -yy
+
+sudo dnf system-upgrade download --releasever=36 -yy
+
+sudo dnf system-upgrade reboot

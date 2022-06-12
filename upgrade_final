@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo dnf install remove-retired-packages -yy
+remove-retired-packages -yy
+
+sudo dnf autoremove
+
+
